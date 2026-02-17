@@ -1,9 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <errno.h>
+
+#ifdef _WIN32
+    #include <direct.h>
+    #define MKDIR(path) _mkdir(path)
+#else
+    #include <sys/stat.h>
+    #include <sys/types.h>
+    #define MKDIR(path) mkdir(path, 0777)
+#endif
 
 #define START_LOCATION 274
 #define END_LOCATION 310
@@ -70,13 +77,12 @@ int main(void)
     const char *outFolder = "out";
 
     // Create src and out directories if they dont exist.
-    mode_t mode = 0777;
 
-    if (mkdir(srcFolder, mode) == -1 && errno != EEXIST) {
+    if (MKDIR(srcFolder) == -1 && errno != EEXIST) {
         printf("Error creating directory /src/\n");
         return 1;
     }
-    if (mkdir(outFolder, mode) == -1 && errno != EEXIST) {
+    if (MKDIR(outFolder) == -1 && errno != EEXIST) {
         printf("Error creating directory /out.\n");
         return 1;
     }
@@ -104,5 +110,7 @@ int main(void)
         printf("Error closing directory.\n");
         return 1;
     }
+    printf("Batch Complete! Press Enter to close.\n");
+    getchar();
     return 0;
 }
