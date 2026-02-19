@@ -13,14 +13,17 @@ Because the program looks for a hardcoded block of data in a vgm file if Furnace
 This was built on Furnace v0.6.8.3 for the export format version 1.72. Experience may vary depending on version.
 
 # Before You Use This Software
-I HIGHLY recommend reading through the great guide written by Beatscribe as an introduction to Furnace and how to property export a VGM file for this program.
+I heavily suggest ending all sounds made in Furnace with EC09 (note cut) and FF99 (End Track) to avoid issues post-conversion.
+<img width="380" height="136" alt="image" src="https://github.com/user-attachments/assets/a6f372a0-8e0c-4b64-b912-e5b47f797f11" />
+
+
+I also HIGHLY recommend reading through the great guide written by Beatscribe as an introduction to Furnace and how to properly export a VGM file for this program.
 
 It'll also give you a better understanding of exactly what this program is doing.
 
 READ IT HERE: https://gbstudiocentral.com/article-series/vgm-sound-effects/
 
 # Installation And Usage
-If nothing else make sure to export your sound as a VGM with format version 1.72 and uncheck Loop.
 
 Windows
 - Download the most recent release and unzip
