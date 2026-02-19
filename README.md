@@ -14,6 +14,7 @@ This was built on Furnace v0.6.8.3 for the export format version 1.72. Experienc
 
 # Before You Use This Software
 I heavily suggest ending all sounds made in Furnace with EC09 (note cut) and FF99 (End Track) to avoid issues post-conversion.
+
 <img width="380" height="136" alt="image" src="https://github.com/user-attachments/assets/a6f372a0-8e0c-4b64-b912-e5b47f797f11" />
 
 
